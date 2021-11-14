@@ -1,6 +1,6 @@
 <template>
     <section class="container">
-        <form class="login-form">
+        <form class="login-form vgt-inner-wrap">
             <div class="mb-3">
                 <label
                     for="inputEmail1"

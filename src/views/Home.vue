@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex'
-import Accordion from '@/components/Accordion.vue'
+import {mapActions, mapGetters} from 'vuex';
+import Accordion from '@/components/Accordion.vue';
 
 export default {
     name: 'Home',
