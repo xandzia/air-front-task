@@ -3,30 +3,17 @@
         <a class="navbar-brand" href="/">
             <img alt="Vue logo" src="../assets/logo.png">
         </a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <router-link
-                    v-for="item in navList"
-                    v-bind:key="item.name"
-                    tag="li"
-                    class="nav-item"
-                    :to="item.link"
-                >
-                    {{ item.name }}
-                </router-link>
-            </ul>
-        </div>
+        <ul>
+            <router-link
+                v-for="item in navList"
+                v-bind:key="item.name"
+                tag="li"
+                class="nav-item"
+                :to="item.link"
+            >
+                {{ item.name }}
+            </router-link>
+        </ul>
     </nav>
 </template>
 
@@ -60,10 +47,6 @@ export default {
     width: 64px;
 }
 
-h3 {
-    margin: 40px 0 0;
-}
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -74,5 +57,6 @@ li {
     display: inline-block;
     margin: 0 10px;
     font-weight: 500;
+    cursor: pointer;
 }
 </style>

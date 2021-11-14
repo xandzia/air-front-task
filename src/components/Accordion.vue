@@ -1,5 +1,5 @@
 <template>
-    <article class="accordion vgt-inner-wrap"
+    <article class="accordion vgt-inner-wrap mb-4"
              id="accordion"
     >
         <section class="accordion-item"

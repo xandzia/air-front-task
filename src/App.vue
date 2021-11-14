@@ -2,7 +2,9 @@
     <div id="app">
         <NavBar/>
         <main class="mt-5">
-            <router-view/>
+            <transition name="fade" appear mode="out-in">
+                <router-view/>
+            </transition>
         </main>
     </div>
 </template>
@@ -29,6 +31,12 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .08s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
 
 </style>
