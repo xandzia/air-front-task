@@ -1,5 +1,7 @@
 # Technical Task AIR FRONT
 
+[Demo page](https://xandzia.github.io/air-front-task/#/)
+
 ## Project setup
 ```
 npm install
@@ -13,6 +15,11 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Deploy for Gh-page
+```
+npm run deploy
 ```
 
 ### Lints and fixes files
