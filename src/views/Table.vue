@@ -1,10 +1,10 @@
 <template>
-<section>TABLE</section>
+    <section>TABLE</section>
 </template>
 
 <script>
 export default {
-  name: "Table"
+    name: "Table"
 }
 </script>
 

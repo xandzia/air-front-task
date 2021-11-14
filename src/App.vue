@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <NavBar/>
-    <router-view/>
-  </div>
+    <div id="app">
+        <NavBar/>
+        <router-view/>
+    </div>
 </template>
 
 <script>
@@ -10,20 +10,23 @@
 import NavBar from '@/components/NavBar.vue'
 
 export default {
-  name: 'App',
-  components: {
-    NavBar
-  }
+    name: 'App',
+    components: {
+        NavBar
+    }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "assets/styles/_custom.scss";
+@import "~bootstrap/scss/bootstrap";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 }
 
 </style>
