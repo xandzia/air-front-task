@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 py-2">
-        <a class="navbar-brand" href="/">
+        <router-link class="navbar-brand" to="/">
             <img alt="Vue logo" src="../assets/logo.png">
-        </a>
+        </router-link>
         <ul>
             <router-link
                 v-for="item in navList"
