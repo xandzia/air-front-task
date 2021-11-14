@@ -1,5 +1,6 @@
 <template>
     <section class="container">
+        <h1 class="mb-4">Login</h1>
         <form class="login-form vgt-inner-wrap">
             <div class="mb-3">
                 <label
@@ -38,7 +39,7 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {mapActions} from "vuex"
 
 export default {
     name: "Login",

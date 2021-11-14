@@ -1,5 +1,6 @@
 <template>
     <section class="container mb-4 table--wrapper">
+        <h1 class="mb-4">Table</h1>
         <vue-good-table
             :columns="columns"
             :rows="getComments"
@@ -10,9 +11,9 @@
 </template>
 
 <script>
-import 'vue-good-table/dist/vue-good-table.css';
-import {VueGoodTable} from 'vue-good-table';
-import {mapActions, mapGetters} from "vuex";
+import 'vue-good-table/dist/vue-good-table.css'
+import {VueGoodTable} from 'vue-good-table'
+import {mapActions, mapGetters} from "vuex"
 
 export default {
     name: "Table",
@@ -20,7 +21,7 @@ export default {
         return {
             searchOptions: {
                 enabled: true,
-                placeholder: 'Search this table',
+                placeholder: 'Search this table'
             },
             paginationOptions: {
                 enabled: true,
@@ -33,7 +34,7 @@ export default {
                 nextLabel: 'next',
                 prevLabel: 'prev',
                 rowsPerPageLabel: 'Rows per page',
-                allLabel: 'All',
+                allLabel: 'All'
             },
             columns: [
                 {
@@ -51,11 +52,7 @@ export default {
                     field: 'body',
                     width: '60%'
                 },
-            ],
-            rows: [
-                {id: 1, name: "John", email: '20@@', body: 'gggg'},
-                {id: 2, name: "Jane", email: '22@', body: '2hhh'}
-            ],
+            ]
         }
     },
     components: {
@@ -87,10 +84,12 @@ export default {
     .vgt-select:focus {
         border-color: $primary;
     }
+
     .vgt-table thead {
         th:first-child {
             width: 20%;
         }
+
         th.sorting-asc button:after {
             border-bottom: 5px solid $primary;
         }

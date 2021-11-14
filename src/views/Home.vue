@@ -1,12 +1,13 @@
 <template>
     <section class="home container">
+        <h1 class="mb-4">Accordion</h1>
         <Accordion :items="getPosts"/>
     </section>
 </template>
 
 <script>
-import {mapActions, mapGetters} from 'vuex';
-import Accordion from '@/components/Accordion.vue';
+import {mapActions, mapGetters} from 'vuex'
+import Accordion from '@/components/Accordion.vue'
 
 export default {
     name: 'Home',

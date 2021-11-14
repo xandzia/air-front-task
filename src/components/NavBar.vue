@@ -1,15 +1,32 @@
 <template>
-    <nav>
-        <img alt="Vue logo" src="../assets/logo.png">
-        <ul v-for="item in navList" v-bind:key="item.name">
-            <router-link
-                tag="li"
-                :to="item.link"
-            >
-                {{ item.name }}
-            </router-link>
-            |
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 py-2">
+        <a class="navbar-brand" href="/">
+            <img alt="Vue logo" src="../assets/logo.png">
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <router-link
+                    v-for="item in navList"
+                    v-bind:key="item.name"
+                    tag="li"
+                    class="nav-item"
+                    :to="item.link"
+                >
+                    {{ item.name }}
+                </router-link>
+            </ul>
+        </div>
     </nav>
 </template>
 
@@ -28,8 +45,21 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+@import "../assets/styles/_custom.scss";
+
+.navbar {
+    box-shadow: 0 1px 3px 0 rgb(50 50 93 / 10%), 0 1px 2px 0 rgb(50 50 93 / 6%);
+
+    .router-link-exact-active {
+        color: $primary;
+    }
+}
+
+.navbar-brand img {
+    width: 64px;
+}
+
 h3 {
     margin: 40px 0 0;
 }
@@ -37,14 +67,12 @@ h3 {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     display: inline-block;
     margin: 0 10px;
-}
-
-a {
-    color: #42b983;
+    font-weight: 500;
 }
 </style>
